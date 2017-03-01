@@ -79,6 +79,7 @@ data Preferences = Preferences
                  , _prefMutedChannels                   :: Text
                  , _prefPrivacyPolicySeen               :: Bool
                  , _prefSearchExcludeBots               :: Bool
+                 , _prefSpeakGrowls                     :: Bool
                  } deriving Show
 
 
