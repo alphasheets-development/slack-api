@@ -6,13 +6,10 @@ import Web.Slack
 import Web.Slack.Message
 import System.Environment (lookupEnv)
 import Data.Maybe (fromMaybe)
-#if !MIN_VERSION_base(4,8,0)
-import Control.Applicative
-#endif
 
 myConfig :: String -> SlackConfig
 myConfig apiToken = SlackConfig
-         { _slackApiToken = apiToken -- Specify your API token here
+         { _slackApiToken = apiToken
          }
 
 echoBot :: SlackBot ()
@@ -21,8 +18,7 @@ echoBot _ = return ()
 
 main :: IO ()
 main = do
-  apiToken <- fromMaybe (error "SLACK_API_TOKEN not set")
-               <$> lookupEnv "SLACK_API_TOKEN"
+  let apiToken = "xoxp-PUT-TOKEN-HERE"
   runBot (myConfig apiToken) echoBot ()
 
 

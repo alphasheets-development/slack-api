@@ -11,7 +11,6 @@ data Preferences = Preferences
                  { _prefHighlightWords                  :: Text
                  , _prefUserColors                      :: Text
                  , _prefColorNamesInList                :: Bool
-                 , _prefGrowlsEnabled                   :: Bool
                  , _prefTimezone                        :: Maybe Text
                  , _prefPushDmAlert                     :: Bool
                  , _prefPushMentionAlert                :: Bool
@@ -79,7 +78,6 @@ data Preferences = Preferences
                  , _prefMutedChannels                   :: Text
                  , _prefPrivacyPolicySeen               :: Bool
                  , _prefSearchExcludeBots               :: Bool
-                 , _prefSpeakGrowls                     :: Bool
                  } deriving Show
 
 
